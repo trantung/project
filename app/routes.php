@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/test', function()
 {
-	return View::make('hello');
+	return View::make('test');
 });
 
-Route::resource('test', 'TestController');
-// Route::group(array('prefix' => 'admin','before' => 'auth'), function(){
-    Route::get('/admin', array('as'=>'dashboard.index', 'uses'=>'Admin\DashboardController@index'));
+// Route::resource('test', 'TestController');
+// // Route::group(array('prefix' => 'admin','before' => 'auth'), function(){
+//     Route::get('/admin', array('as'=>'dashboard.index', 'uses'=>'Admin\DashboardController@index'));
 
-// });
+// // });
