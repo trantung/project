@@ -25,6 +25,7 @@ $(function () {
             } catch (e) {
                 result = window.tmpl('tmpl-error', e);
             }
+            // $('#result').JS(result);
             $('#result').html(result);
         },
         init = function (event) {

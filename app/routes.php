@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/test', function()
+Route::get('/', function()
 {
-	return View::make('test');
+    return View::make('test');
+});
+Route::get('/demo', function()
+{
+	return View::make('demo');
 });
 
 // Route::resource('test', 'TestController');
