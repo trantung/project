@@ -1,4 +1,4 @@
-  <title>CloudEdit: HTML Live Editor</title>
+  <title>Project team</title>
     {{ HTML::style('asset/css/cloudEdit.min.css') }}
     {{ HTML::style('asset/css/contextMenu.min.css') }}
     
@@ -17,8 +17,8 @@
       </div><!--
       -->
       <div class="column-33">
-        <h1>CloudEdit: HTML Live Editor</h1>
-         This is Content Posts
+        <h1>Project team</h1>
+         This is Content Postsasdsdas
       </div>
       <div class="column-33 btnGroup last">
         <button class="btn" id="previewToggle" title="Enlarge Preview">Preview</button>
@@ -27,9 +27,46 @@
       </div>
     </div>
     <div class="row windowGroup">
+      <?php
+        $test= '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                <script>
+                $(document).ready(function(){
+                  $("button").click(function(){
+                    $("#div1").fadeIn();
+                    $("#div2").fadeIn("slow");
+                    $("#div3").fadeIn(3000);
+                  });
+                });
+                </script>
+                p>Demonstrate fadeIn() with different parameters.</p>
+                <button>Click to fade in boxes</button>
+                <br><br>
+                <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+                <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+                <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>';
+        ?>
         <div class="column-33">
             <div class="window js">
-                <pre id="js"></pre>
+                <pre id="js">
+                <i>
+                  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+                  <script>
+                  $(document).ready(function(){
+                    $("button").click(function(){
+                      $("#div1").fadeIn();
+                      $("#div2").fadeIn("slow");
+                      $("#div3").fadeIn(3000);
+                    });
+                  });
+                  </script>
+                  p>Demonstrate fadeIn() with different parameters.</p>
+                  <button>Click to fade in boxes</button>
+                  <br><br>
+                  <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+                  <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+                  <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+                  <i>
+                </pre>
                 <span class="windowLabel" id="jsLabel">JavaScript/jQuery 1.x</span>
             </div>
         </div>

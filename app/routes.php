@@ -17,7 +17,7 @@ Route::get('/', function()
 });
 Route::get('/demo', function()
 {
-	return View::make('demo');
+	// return link_to_asset('http://localhost/project_team/project_team/public/test.html') ;
 });
 
 // Route::resource('test', 'TestController');
@@ -25,3 +25,8 @@ Route::get('/demo', function()
 //     Route::get('/admin', array('as'=>'dashboard.index', 'uses'=>'Admin\DashboardController@index'));
 
 // // });
+// Route::get('/', array('as'=>'index', 'uses'=>'TestController@index'));
+Route::get('/post', array('as'=>'post', 'uses'=>'TestController@post'));
+Route::get('/script', array('as'=>'script', 'uses'=>'TestController@script'));
+Route::get('/test', array('as'=>'test', 'uses'=>'TestController@store'));
+// Route::get('/')

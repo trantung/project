@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+<body ng-app="myNoteApp">
+<div ng-controller="myNoteCtrl" id ="test1">
+    <tr><td>{{ result.content}}</td></tr>
+    <tr><td>{{ result.id}}</td></tr>
+    <tr><td>{{ result1.id}}</td></tr>
+    <tr><td>{{ result1.script}}</td></tr>
+</div>
+<script type="text/javascript">
+    
+    var app = angular.module("myNoteApp", []);
+    app.controller("myNoteCtrl", function($scope,$http) {
+    $scope.result = {};
+    $scope.result1 = {};
+    var url = "http://localhost/project_team/project_team/public/post";
+    console.log(url);
+    $http.get(url).
+      success(function(data, status, headers, config) {
+        // this callback will be called asynchronously
+        // when the response is available
+          $scope.result = data[0];
+        //console.log($scope.result);
+      }).
+      error(function(data, status, headers, config) {
+        console.log(config);
+      });
+      var url2 = "http://localhost/project_team/project_team/public/script";
+       $http.get(url2).
+      success(function(data, status, headers, config) {
+        // this callback will be called asynchronously
+        // when the response is available
+          $scope.result1 = data[0];
+        console.log($scope.result1);
+      }).
+      error(function(data, status, headers, config) {
+        console.log(config);
+      });
+});
+</script>
+</body>
+</html>

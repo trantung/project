@@ -9,8 +9,11 @@ class TestController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
-		return View::make('test');
+		$user =User::all();
+		// dd($user);
+		header('Access-Control-Allow-Origin: *');
+		return $test = Response::json($user);
+		// dd($test);
 	}
 
 
@@ -23,6 +26,19 @@ class TestController extends \BaseController {
 	{
 		//
 	}
+	public function post()
+	{
+		$post = Post::all();
+		header('Access-Control-Allow-Origin: *');
+		return Response::json($post);
+	}
+
+	public function script()
+	{
+		$script = Script::all();
+		header('Access-Control-Allow-Origin: *');
+		return Response::json($script);
+	}
 
 
 	/**
@@ -32,7 +48,7 @@ class TestController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		return View::make('tung');
 	}
 
 
